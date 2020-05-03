@@ -2,7 +2,6 @@ import boto3
 import json
 import os
 from zipfile import ZipFile
-from clients import lambda_client
 from dcs_util.clients import lambda_client
 
 
