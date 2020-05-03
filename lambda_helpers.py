@@ -3,6 +3,7 @@ import json
 import os
 from zipfile import ZipFile
 from clients import lambda_client
+from dcs_util.clients import lambda_client
 
 
 def create_lambda_zip(function_name):
