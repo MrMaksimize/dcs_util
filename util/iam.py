@@ -2,7 +2,7 @@ import boto3
 import json
 import os
 
-from dcs_util.helpers.clients import iam
+from dcs.util.clients import iam
 
 policy = {
     "Version":

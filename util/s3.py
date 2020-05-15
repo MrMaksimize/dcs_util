@@ -1,5 +1,5 @@
 import boto3, json, os
-from dcs_util.helpers.clients import *
+from dcs.helpers.clients import *
 
 
 def empty_bucket(Bucket):

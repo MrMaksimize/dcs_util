@@ -2,7 +2,7 @@ import boto3
 import json
 import os
 from zipfile import ZipFile
-from dcs_util.helpers.clients import lambda_client
+from dcs.util.clients import lambda_client
 
 
 def create_lambda_zip(function_name):

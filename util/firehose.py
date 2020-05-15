@@ -1,7 +1,7 @@
 import boto3
 import json
 import os
-from dcs_util.helpers.clients import firehose
+from dcs.util.clients import firehose
 
 
 def create_stream(DeliveryStreamName,
