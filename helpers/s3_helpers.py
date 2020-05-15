@@ -1,5 +1,5 @@
 import boto3, json, os
-from dcs_util.clients import *
+from dcs_util.helpers.clients import *
 
 
 def empty_bucket(Bucket):
@@ -16,3 +16,9 @@ def delete_bucket(Bucket):
 
 def create_bucket(Bucket):
     s3.create_bucket(Bucket=Bucket)
+
+
+def clean_buckets():
+    buckets = s3.list_buckets()['Buckets']
+    for b in buckets:
+        delete_bucket(b['Name'])

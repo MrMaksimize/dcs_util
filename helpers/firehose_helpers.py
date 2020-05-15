@@ -1,7 +1,7 @@
 import boto3
 import json
 import os
-from dcs_util.clients import firehose
+from dcs_util.helpers.clients import firehose
 
 
 def create_stream(DeliveryStreamName,
@@ -24,3 +24,9 @@ def create_stream(DeliveryStreamName,
 
 def list_streams():
     return firehose.list_delivery_streams()
+
+
+def clean_streams():
+    streams = list_streams()['DeliveryStreamNames']
+    for s in streams:
+        firehose.delete_delivery_stream(DeliveryStreamName=s)
